@@ -22,7 +22,8 @@ GAME_EVEN_TEXT = 'Answer "yes" if the number is even, otherwise answer "no".'
 def get_user_input():
     """Function to get user input and check if it's valid"""
     user_io = input()
-    if len(user_io) >= 2:  # Checking if user input is too short
+    # Checking if user input is too short
+    if len(user_io) >= 2:
         return user_io
     else:
         print("Your answer is too short. Please try again.")
@@ -46,8 +47,10 @@ def parity_check():
             counter += 1  # Incrementing counter on correct answer
         else:
             print(f"Wrong answer! Let's try again, {name()}!")
-            parity_check()  # Calling the function recursively on incorrect answer
-    print(f'Congratulations, {name()}!')  # Congratulating the user after three correct answers
+            # Calling the function recursively on incorrect answer
+            parity_check()
+            # Congratulating the user after three correct answers
+    print(f'Congratulations, {name()}!')
 
 
 def main():
