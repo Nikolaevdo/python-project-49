@@ -13,42 +13,41 @@
   After a successful game, you need to output:
  Congratulations, Bill"""
 
-from random import randint
 from brain_games.cli import welcome_user, name
+from random import randint
 
-GAME_EVEN_QUEST = 'Answer "yes" if the number is even, otherwise answer "no".'
+GAME_EVEN_TEXT = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
-def console_input():
+def get_user_input():
+    """Function to get user input and check if it's valid"""
     user_io = input()
-    if len(user_io) >= 2:
+    if len(user_io) >= 2:  # Checking if user input is too short
         return user_io
     else:
         print("Your answer is too short. Please try again.")
-        return console_input()
+        return get_user_input()
 
 
 def parity_check():
+    """Function to check if number is even and get user input"""
     welcome_user()
-    print(GAME_EVEN_QUEST)
+    print(GAME_EVEN_TEXT)
 
-    counter = 0
+    counter = 0  # Counter for correct answers
     while counter < 3:
         mystery_number = randint(1, 100)
         print(f"Question: {mystery_number}")
-        user_input = console_input()
+        user_input = get_user_input()
         print(f"Your answer: {user_input}")
         if (mystery_number % 2 == 0 and user_input == 'yes') \
                 or (mystery_number % 2 != 0 and user_input == 'no'):
-            print('Current!')
-            counter += 1
+            print('Correct!')
+            counter += 1  # Incrementing counter on correct answer
         else:
-            print(f'''Wrong answer! Better luck next time
-                Let's try again, {name()}!''')
-            parity_check()
-
-
-print(f'Congratulations, {name}!')
+            print(f"Wrong answer! Let's try again, {name()}!")
+            parity_check()  # Calling the function recursively on incorrect answer
+    print(f'Congratulations, {name()}!')  # Congratulating the user after three correct answers
 
 
 def main():
