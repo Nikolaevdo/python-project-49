@@ -15,5 +15,3 @@ if __name__ == '__main__':
     welcome_user()
 
 
-def name():
-    return name()

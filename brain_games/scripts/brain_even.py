@@ -35,7 +35,8 @@ def parity_check():
     welcome_user()
     print(GAME_EVEN_TEXT)
 
-    counter = 0  # Counter for correct answers
+    # Counter for correct answers
+    counter = 0
     while counter < 3:
         mystery_number = randint(1, 100)
         print(f"Question: {mystery_number}")
@@ -46,11 +47,11 @@ def parity_check():
             print('Correct!')
             counter += 1  # Incrementing counter on correct answer
         else:
-            print(f"Wrong answer! Let's try again, {name()}!")
+            print(f"Wrong answer! Let's try again, {name}!")
             # Calling the function recursively on incorrect answer
             parity_check()
             # Congratulating the user after three correct answers
-    print(f'Congratulations, {name()}!')
+    print(f'Congratulations, {name}!')
 
 
 def main():
