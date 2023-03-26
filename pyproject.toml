@@ -5,7 +5,7 @@ description = "Fist project on course Hexlet.io"
 authors = ["Nikolaev A.A"]
 readme = "README.md"
 packages = [
-  { include = "brain_games" },
+    { include = "brain_games" },
 ]
 
 
@@ -17,6 +17,7 @@ prompt = "^0.4.1"
 brain-games = "brain_games.scripts.brain_games:main"
 brain-even = "brain_games.scripts.brain_even:main"
 brain-calc = "brain_games.scripts.brain_calc:main"
+brain-gcd = "brain_games.scripts.brain_gcd:main"
 
 [tool.poetry.group.dev.dependencies]
 flake8 = "^6.0.0"
