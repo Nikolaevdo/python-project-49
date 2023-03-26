@@ -1,7 +1,9 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """
-The essence of the game is as follows: the user is shown a random mathematical expression,
-for example 35 + 16, which must be calculated and the correct answer written down.
+The essence of the game is as follows: the user is shown
+a random mathematical expression,
+for example 35 + 16, which must be
+calculated and the correct answer written down.
 """
 
 from random import randint, choice
@@ -31,7 +33,8 @@ def main():
             counter += 1
             print("Correct!")
         else:
-            print(f"\'{user_input}\' is wrong answer ;(. Correct answer was \'{task_value}\'.")
+            print(f"\'{user_input}\' is wrong answer ;(. "
+                  f"Correct answer was \'{task_value}\'.")
             print(f"Let's try again, {name}!")
             # Exiting the game on incorrect answer
             return
