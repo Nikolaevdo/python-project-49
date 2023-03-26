@@ -36,3 +36,7 @@ def main():
                   f"\nLet's try again, {name}!")
             return
     print(f'Congratulations, {name}!')
+
+
+if __name__ == '__main__':
+    main()
