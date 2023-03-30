@@ -1,17 +1,4 @@
 #!/usr/bin/env python3
-""" The essence of the game is as follows: the user is shown a
- random number.And he needs to answer
- yes if the number is even, or no if it is odd
- If the user gives an incorrect answer, it is necessary to end the
- game and display a message:
- 'yes' is wrong answer ;(. Correct answer was 'no'.
- Let's try again, Bill!
- If the user entered the correct answer, you need to display:
- Correct!
- and move on to the next number.
- The user must give the correct answer to three questions in a row.
-  After a successful game, you need to output:
- Congratulations, Bill"""
 
 from brain_games.cli import welcome_user, name
 from random import randint
@@ -49,7 +36,7 @@ def parity_check():
         else:
             print(f"Wrong answer! Let's try again, {name}!")
             # Calling the function recursively on incorrect answer
-            parity_check()
+            return
             # Congratulating the user after three correct answers
     print(f'Congratulations, {name}!')
 
