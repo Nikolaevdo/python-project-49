@@ -12,7 +12,8 @@ packages = [
 [tool.poetry.dependencies]
 python = "^3.10"
 prompt = "^0.4.1"
-calc = "^1.0"
+pip = "^23.0.1"
+flake8 = "^5.0.0"
 
 [tool.poetry.scripts]
 brain-games = "brain_games.scripts.brain_games:main"
@@ -20,7 +21,7 @@ brain-even = "brain_games.scripts.brain_even:main"
 brain-calc = "brain_games.scripts.brain_calc:main"
 brain-gcd = "brain_games.scripts.brain_gcd:main"
 brain-progression = "brain_games.scripts.brain_progression:main"
-brain-prime = "brain_games.scripts.brain_prime:main
+brain-prime = "brain_games.scripts.brain_prime:main"
 
 [tool.poetry.group.dev.dependencies]
 flake8 = "^6.0.0"
