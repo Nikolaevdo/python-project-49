@@ -1,4 +1,3 @@
-
 from operator import add, sub, mul
 from random import randint, choice
 
@@ -13,10 +12,6 @@ OPERATORS = {
 def make_question():
     first_number, second_number = randint(1, 50), randint(1, 50)
     operator = choice(list(OPERATORS.keys()))
-    correct_answer = str(abs(OPERATORS[operator](first_number, second_number)))
-    if first_number > second_number:
-        task = f'{first_number} {operator} {second_number}'
-    elif second_number > first_number:
-        task = f'{second_number} {operator} {first_number}'
-
+    task = f"{first_number} {operator} {second_number}"
+    correct_answer = str(eval(task))
     return correct_answer, task
