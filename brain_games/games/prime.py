@@ -15,6 +15,8 @@ def make_question():
 
 
 def is_prime(task):
+    if task == 1 or task < 0:
+        return False
     i = 2
     while i <= sqrt(task):
         if task % i == 0:
