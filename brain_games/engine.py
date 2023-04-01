@@ -1,5 +1,7 @@
 import prompt
 
+COUNTER_GAME_LOOP = 3
+
 
 def greet():
     print('Welcome to the Brain Games!')
@@ -8,20 +10,17 @@ def greet():
     return name
 
 
-def core(game):
+def run_game(game):
     name = greet()
     print(game.DESCRIPTION)
-    counter = 0
 
-    while counter < 3:
+    for counter in range(COUNTER_GAME_LOOP):
         correct_answer, task = game.make_question()
         print(f'Question: {task}')
         user_answer = prompt.string('Your answer: ')
 
         if user_answer == correct_answer:
             print('Correct!')
-            counter += 1
-
         else:
             print(f'\'{user_answer}\' is wrong answer ;(. '
                   f'Correct answer was \'{correct_answer}\'.'
