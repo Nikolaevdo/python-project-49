@@ -4,12 +4,9 @@ DESCRIPTION = 'What number is missing in the progression?'
 
 
 def make_progression():
-    task = []
-    initial_number, difference = randint(0, 50), randint(0, 50)
-    length = 10
-    for index in range(length):
-        initial_number += difference
-        task.append(initial_number)
+    start, step, length = randint(0, 50), randint(0, 50), 10
+    end = start + length * step
+    task = list(range(start, end, step))
 
     random_index = randint(0, 9)
     correct_answer = str(task[random_index])
