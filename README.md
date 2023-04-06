@@ -16,6 +16,7 @@
  _**brain-prime** - prime number definition_
 
  _**brain-progression** - determining the progression of numbers in their sequence_
+The project is written in Python 3.10 and uses the Poetry build system.
 
 ## Minimum requirement 
 
